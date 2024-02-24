@@ -1,0 +1,52 @@
+*{
+    /* outline: 1px solid red; */
+    min-width: 10px;
+    min-height: 10px;
+}
+
+.not-found{
+    height: calc(100vh - 56px);
+    color: rgb(35, 35, 35);
+    overflow: hidden;
+}
+
+.not-found > .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.not-found > .container > .title > span{
+    font-size: clamp(10px,10vw,100px);
+    font-weight: bold;
+}
+
+.not-found > .container > .sub-title > span{
+    font-size: clamp(10px,5vw,50px);
+}
+
+.not-found > .container > button{
+    margin-top: 10px;
+    padding: 20px;
+    width: clamp(10px,50vw,500px);
+    background: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.not-found > .container > button:hover{
+    background-color: rgb(35, 35, 35);
+    color: rgb(250, 250, 250);
+}
+
+@media screen {
+    .not-found{
+        height: calc(100vh - 72px);
+    }
+}

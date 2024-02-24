@@ -1,0 +1,109 @@
+.disabled{
+    background-color: gray !important;
+    cursor: not-allowed !important;
+}
+
+.login-form{
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form > .container{
+    width: 90%;
+    height: 90%;
+    max-width: 800px;
+}
+.login-form > .container > div{
+    margin-bottom: 20px;
+}
+
+.login-form > .container > div > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.login-form > .container > div > label{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login-form > .container > div > div{
+    position: relative;
+}
+
+.login-form > .container > div > div > img{
+    position: absolute;
+    width: 18px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-60%);
+    opacity: 0.4;
+}
+
+.login-form > .container > div > div > input{
+    width: 100%;
+    border: none;
+    outline: 1px solid rgba(35, 35, 35, 0.3);
+    padding: 16px 40px;
+    border-radius: 3px;
+}
+.login-form > .container > .submit-button-and-login-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.login-form > .container > .submit-button-and-login-link > button{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 100px;
+    color: rgba(250, 250, 250, 1);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(132, 189, 132);
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.login-form > .container > .submit-button-and-login-link > a{
+    text-decoration: none;
+    position: relative;
+    bottom: 2px;
+}
+
+/* Adjust icon a litle bit */
+.login-form > .container > .email > div > img{
+    transform: translateY(-45%);
+    width: 22px;
+}
+
+/* Errors Group CSS */
+.login-form > .container > div > .errors{
+    margin-top: 10px;
+    background-color: rgb(255, 100, 100);
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form > .container > .password > div > img,
+.login-form > .container > .confirm-password > div > img{
+    transform: translateY(-60%);
+    width: 22px;
+}
+
+@media screen and (min-width: 768px) {
+    .login-form{
+        height: calc(100vh - 72px);
+    }
+}

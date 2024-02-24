@@ -1,0 +1,41 @@
+<form class="login-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+
+        <div class="title">
+            <span>Login</span>
+        </div>
+
+        <div class="username">
+            <label for="username">Username</label>
+            <div>
+                <img src="../../assets/images/user-icon.png">
+                <input type="text" placeholder="Enter Username" formControlName="username">
+            </div>
+
+            <div class="errors" *ngIf="username?.touched && username?.invalid">
+                <span *ngIf="username?.errors?.['required']">Username is required.</span>
+                <span *ngIf="username?.errors?.['minlength']">Username should have at least {{username?.errors?.['minlength'].requiredLength}} Characters.</span>
+            </div>
+        </div>
+
+        <div class="password">
+            <label for="password">Password</label>
+            <div>
+                <img src="../../assets/images/password-icon.png">
+                <input type="password" placeholder="Enter Password" formControlName="password">
+            </div>
+            <div class="errors" *ngIf="password?.touched && password?.invalid">
+                <span *ngIf="password?.errors?.['required']">Password is required.</span>
+                <span *ngIf="password?.errors?.['minlength']">Password should have at least {{password?.errors?.['minlength'].requiredLength}} Characters.</span>
+            </div>
+        </div>
+
+        <div class="submit-button-and-login-link">
+            <button type="submit" [disabled]="!registerForm.valid" [class.disabled]="!registerForm.valid">Log in</button>
+            <a routerLink="/register">Sign up</a>
+        </div>
+
+    </div>
+</form>
+
+

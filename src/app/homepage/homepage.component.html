@@ -1,0 +1,31 @@
+<div class="homepage">
+    <div class="container">
+        <div class="title">
+            <span>Join our</span>
+            <span class="hero">Masterclass</span>
+            <span class="animated-line">|</span>
+        </div>
+
+
+        <div class="classroom-group">
+            <div class="classroom" *ngFor="let classroom of classrooms">
+                <img src="{{classroom.image}}">
+                <span class="title">{{classroom.title}}</span>
+                <span class="description">{{classroom.description | summary}}</span>
+                <div class="button-and-price">
+                    <button (click)="addUserClassroom(classroom._id)">Register</button>
+                    <span>${{classroom.price}}</span>
+                </div>
+            </div>
+            <div class="no-class-avaliable" *ngIf="classrooms.length === 0">
+                No Class Avaliable Now !
+            </div>
+        </div>
+
+
+
+
+        <!-- เดี๋ยวให้เชคว่า ถ้า -->
+
+    </div>
+</div>

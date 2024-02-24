@@ -1,0 +1,17 @@
+<div class="my-class">
+    <div class="container">
+
+        <div class="classroom-group">
+            <div class="classroom" *ngFor="let classroom of user.userClassroom">
+                <img src={{classroom.image}}>
+                <span class="title">{{classroom.title}}</span>
+                <span class="description">{{classroom.description | summary}}</span>
+                <div class="button-and-price">
+                    <button (click)="showLesson()">Learn now</button>
+                    <span>${{classroom.price}}</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

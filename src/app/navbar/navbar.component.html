@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <div class="logo">
+        <a routerLink="/" >Vasanapong Academy</a>
+    </div>
+    <ul class="menu" id="menu">
+        <li><a routerLink="/my-class" *ngIf="authService.isLogin()" >My Class</a></li>
+        <li><a *ngIf="authService.isLogin()" (click)="authService.logout()">Log out</a></li>
+    </ul>
+    <div class="toggle" (click)="toggleMobileDropdown()">
+        <a>| | |</a>
+    </div>
+</nav>
